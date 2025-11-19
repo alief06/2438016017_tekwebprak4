@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Useless Facts</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef3ff, #dce7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 420px;
+    }
+    .fact {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    button {
+      background: linear-gradient(135deg, #5b7bff, #0057ff);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🤪 Random Useless Facts</h1>
+    <div class="card">
+      <div id="fact" class="fact">Some fish cough.</div>
+      <button onclick="generateFact()">🔄 Get Another Random Fact</button>
+    </div>
+  </div>
+
+  <script>
+    const facts = [
+      "Some fish cough.",
+      "Bananas are berries, but strawberries aren’t.",
+      "Octopuses have three hearts.",
+      "Scotland has 421 words for 'snow'.",
+      "A group of flamingos is called a 'flamboyance'.",
+      "Honey never spoils.",
+      "Blue whales' hearts weigh as much as a car.",
+    ];
+
+    function generateFact() {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById('fact').textContent = randomFact;
+    }
+  </script>
+</body>
+</html>
